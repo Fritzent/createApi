@@ -1,4 +1,6 @@
 const listRouter = require('./list');
+const addRouter = require('./createbook');
+const deleteRouter = require('./delete')
 
 const appRouter = (app, fs) =>{
 
@@ -7,6 +9,8 @@ const appRouter = (app, fs) =>{
     });
 
     listRouter(app, fs);
+    addRouter(app,fs);
+    deleteRouter(app,fs);
    
 }
 module.exports = appRouter;
